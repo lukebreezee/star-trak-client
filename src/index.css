@@ -1,0 +1,537 @@
+.login-parent {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-link {
+  width: 100px;
+  margin-top: 10px;
+}
+
+.login-fields {
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  gap: 10px;
+}
+
+nav {
+  max-height: 15vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  align-self: center;
+  display: grid;
+  z-index: 1;
+  color: white;
+  box-shadow: 1px 1px 5px #444444;
+}
+
+nav > ul {
+  background-color: #FFFFFF;
+  display: grid;
+  grid-template-columns: 1.6fr 3.2fr 3.2fr 3.2fr 8fr 1.8fr 1.8fr;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0 17px 0 17px;
+  z-index: 1;
+}
+
+.nav-link {
+
+  color: #444444;
+  align-items: center;
+  margin-left: 1px;
+  margin-right: 1px;
+  font-family: Ubuntu, monospace;
+  justify-self: center;
+
+}
+
+.link-component,
+.mobile-bars {
+
+  text-decoration: none;
+  justify-self: center;
+
+}
+
+#app {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+#nav-button {
+  padding: 0 15px 0 15px;
+}
+
+.aligned {
+
+  align-self: center;
+
+}
+
+#registration-status, 
+#login-status,
+#create-team-status,
+#team-login-status {
+  color: #860b0b;
+  margin: 0px;
+}
+
+.scrolling-list {
+
+  width: 600px;
+  height: 200px;
+  overflow-y: scroll;
+  overflow-x:hidden;
+  border-style: solid;
+  border-color: #CCCCCC;
+  border-width: 2px;
+  box-shadow: 1px 1px 5px #CCCCCC;
+  background-color: #FFFFFF;
+
+}
+
+.scrolling-list > div {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: left;
+  align-items: center;
+  grid-gap: 10px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #EEEEEE;
+
+}
+
+.scrolling-list-div-left {
+
+  margin-left: 5px;
+
+}
+
+.scrolling-list-div-right {
+
+  margin-right: 5px;
+
+}
+
+.member-list-headers {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: left;
+  align-items: center;
+
+}
+
+.ticket-list-headers {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-items: left;
+  align-items: center;
+
+}
+
+.project-list-headers {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-items: left;
+  align-items: center;
+
+}
+
+.scrolling-list-small {
+
+  width: 300px;
+  height: 200px;
+  overflow-y: scroll;
+  overflow-x:hidden;
+  border-style: solid;
+  border-color: #CCCCCC;
+  border-width: 2px;
+  box-shadow: 1px 1px 5px #CCCCCC;
+  background-color: #FFFFFF;
+
+}
+
+.scrolling-list-xs {
+
+  width: 300px;
+  height: 100px;
+  overflow-y: scroll;
+  overflow-x:hidden;
+  border-style: solid;
+  border-color: #CCCCCC;
+  border-width: 2px;
+  box-shadow: 1px 1px 5px #CCCCCC;
+  background-color: #FFFFFF;
+
+}
+
+.scrolling-list-small > div {
+
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #EEEEEE;
+
+}
+
+.scrolling-list-small > div:hover,
+.scrolling-list-medium > div:hover {
+
+  cursor: pointer;
+  background-color: #EEEEEE;
+
+}
+
+.scrolling-list-medium {
+
+  width: 500px;
+  height: 200px;
+  overflow-y: scroll;
+  overflow-x:hidden;
+  border-style: solid;
+  border-color: #CCCCCC;
+  border-width: 2px;
+  box-shadow: 1px 1px 5px #CCCCCC;
+  background-color: #FFFFFF;
+
+}
+
+.ticket-list-div {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-items: left;
+  align-items: center;
+  grid-gap: 10px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #EEEEEE;
+
+}
+
+.project-list-div {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-items: left;
+  align-items: center;
+  grid-gap: 10px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #EEEEEE;
+
+}
+
+.description {
+
+  width: 200px;
+  height: 140px;
+  overflow-wrap: break-word;
+  resize: none;
+
+}
+
+#logo {
+
+  width: 165px;
+  margin: 5px 0 5px 0;
+
+}
+
+@keyframes colorize-nav-button {
+
+  0% {
+
+    color: #444444;
+
+  }
+
+  100% {
+
+    color: #FF7700
+
+  }
+
+}
+
+.nav-link:hover {
+
+  animation-name: colorize-nav-button;
+  animation-duration: .25s;
+  animation-fill-mode: forwards;
+
+}
+
+#parent-div {
+
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.main-page-parent {
+
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+
+}
+
+.secondary-page-parent {
+
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  position: absolute;
+  top: 25%;
+  padding-bottom: 15%;
+
+}
+
+.notification-page-parent {
+
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 20%;
+
+}
+
+.account-page-parent {
+
+
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  max-width: 100%;
+  gap: 7px;
+
+}
+
+.account-page-main-parent {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.notification-div {
+
+  padding-top: 1%;
+  padding-bottom: 1%;
+  width: 80vw;
+
+}
+
+#app {
+
+  background: linear-gradient(90deg, #F4FAFF, #FFF9F4);
+
+}
+
+.spaced-form {
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+}
+
+#github-button,
+#google-button {
+
+  width: 100%;
+  margin: 0;
+  font-size: 15px;
+  font-family: Ubuntu;
+  height: 55px;
+
+}
+
+@keyframes colorize-github-button {
+
+  100% {
+
+    background-color: #222222;
+    border-style: none;
+
+  }
+
+}
+
+#github-button:hover {
+
+  animation-name: colorize-github-button;
+  animation-duration: .25s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+
+}
+
+#google-button:hover {
+
+  animation-name: colorize-google-button;
+  animation-duration: .25s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+
+}
+
+.card-ul {
+
+  list-style: none;
+
+}
+
+.card {
+
+  border-style: solid;
+  border-color: #CCCCCC;
+  border-width: 2px;
+  box-shadow: 1px 1px 5px #CCCCCC;
+
+}
+
+.nav-icon:hover {
+
+  animation-name: colorize-nav-button;
+  animation-duration: .25s;
+  animation-fill-mode: forwards;
+
+}
+
+#update-name {
+
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  overflow-x: visible; */
+  width: 130%;
+
+}
+
+#update-button-parent {
+
+  display: flex;
+
+}
+
+#update-button {
+
+  align-self: center;
+  justify-self: center;
+  position: relative;
+  bottom: 25%;
+  right: 15%;
+
+}
+
+.change-auth {
+
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  column-gap: 3px;
+  position: relative;
+  left: 15%;
+
+}
+
+.change-auth-form {
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+}
+
+#my-projects-list {
+
+  width: 600px;
+
+}
+
+.alert {
+
+  max-width: fit-content;
+
+}
+
+#view-ticket-parent {
+
+  margin-top: 10%;
+
+}
+
+@media (max-width: 700px) {
+
+  nav > ul {
+
+    background-color: #FFFFFF;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0 17px 0 17px;
+    z-index: 1;
+
+  }
+
+  #my-projects-list {
+
+    width: 300px;
+
+  }
+
+  .main-page-parent {
+
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15%;
+
+  }
+
+  .scrolling-list {
+
+    width: 300px;
+
+  }
+
+  .scrolling-list-medium {
+
+    width: 300px;
+
+  }
+
+  #view-ticket-parent,
+  #members-admin-parent {
+
+    margin-top: 100%;
+
+  }
+
+}
