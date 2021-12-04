@@ -262,6 +262,8 @@ const LoginComponent = props => {
 
                 <Link to="/demo-user-select">Continue as Demo User</Link>
 
+                <div>foo</div>
+
             </div>
 
         </div>
