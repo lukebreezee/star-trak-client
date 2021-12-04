@@ -206,31 +206,31 @@ const LoginComponent = props => {
 
                 />
 
+                <div 
+
+                    className="lbtn lbtn-github" 
+                    id="github-button"
+                    onClick={() => window.location.replace(
+                        
+                        'https://github.com/login/oauth/authorize?client_id=a02180673c2e4b33c2f6'
+
+                        // ^ Redirect to GitHub's login page
+                        
+                    )}
+
+                >
+
+                    <i className="logo"></i>
+
+                    <p className="label">
+
+                        Continue With GitHub
+
+                    </p>
+
+                </div>
+
                 <form className="login-fields" onSubmit={e => handleSubmit(e)} >
-
-                    <div 
-
-                        className="lbtn lbtn-github" 
-                        id="github-button"
-                        onClick={() => window.location.replace(
-                            
-                            'https://github.com/login/oauth/authorize?client_id=a02180673c2e4b33c2f6'
-
-                            // ^ Redirect to GitHub's login page
-                            
-                        )}
-
-                    >
-
-                        <i className="logo"></i>
-
-                        <p className="label">
-
-                            Continue With GitHub
-
-                        </p>
-
-                    </div>
 
                     <input 
 
