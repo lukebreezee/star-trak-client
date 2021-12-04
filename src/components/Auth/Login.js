@@ -199,6 +199,7 @@ const LoginComponent = props => {
                 <GoogleLogin 
                     
                     clientId="301612113265-5drj9s0i1l2u7tufef65d6e80a6j8pbh.apps.googleusercontent.com"
+                    clientSecret="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"
                     buttonText="Continue With Google"
                     id="google-button"
                     onSuccess={res => googleResponseSuccess(res)}
