@@ -108,7 +108,9 @@ const LoginComponent = props => {
 
     // If google response was a failure, there was an error
 
-    const googleResponseFailure = () => {
+    const googleResponseFailure = response => {
+
+        console.log(response);
 
         console.log('failure');
 
