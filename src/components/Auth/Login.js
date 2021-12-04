@@ -190,6 +190,8 @@ const LoginComponent = props => {
 
                 <div className="aligned">Welcome, Please Log In</div>
 
+                <div id="login-status" className="aligned alert" />
+
                 <br />
 
                 <GoogleLogin 
@@ -203,8 +205,6 @@ const LoginComponent = props => {
                     cookiePolicy={'single_host_origin'}
 
                 />
-
-                <div id="login-status" className="aligned alert" />
 
                 <form className="login-fields" onSubmit={e => handleSubmit(e)} >
 
