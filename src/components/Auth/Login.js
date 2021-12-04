@@ -204,7 +204,7 @@ const LoginComponent = props => {
 
                 />
 
-                <div id="login-status" className="aligned alert" />\
+                <div id="login-status" className="aligned alert" />
 
                 <form className="login-fields" onSubmit={e => handleSubmit(e)} >
 
