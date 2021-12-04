@@ -92,7 +92,7 @@ const getTeamInfo = () => {
 
         if (!store.getState().root.userInfo.username) {
 
-            return reject({ message: 'User not logged in' });
+            return reject();
     
         }
 
