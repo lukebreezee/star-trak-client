@@ -196,6 +196,17 @@ const LoginComponent = props => {
 
                 <div className="aligned">Welcome, Please Log In</div>
 
+                <GoogleLogin 
+                    
+                    clientId="301612113265-5drj9s0i1l2u7tufef65d6e80a6j8pbh.apps.googleusercontent.com"
+                    buttonText="Continue With Google"
+                    id="google-button"
+                    onSuccess={res => googleResponseSuccess(res)}
+                    onFailure={res => googleResponseFailure(res)}
+                    cookiePolicy={'single_host_origin'}
+
+                />
+
                 <div id="login-status" className="aligned alert" />
 
                 <br />
@@ -225,17 +236,6 @@ const LoginComponent = props => {
                         </p>
 
                     </div>
-
-                    <GoogleLogin 
-                    
-                        clientId="301612113265-5drj9s0i1l2u7tufef65d6e80a6j8pbh.apps.googleusercontent.com"
-                        buttonText="Continue With Google"
-                        id="google-button"
-                        onSuccess={res => googleResponseSuccess(res)}
-                        onFailure={res => googleResponseFailure(res)}
-                        cookiePolicy={'single_host_origin'}
-
-                    />
 
                     <input 
 
