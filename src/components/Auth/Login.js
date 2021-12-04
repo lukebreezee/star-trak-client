@@ -37,8 +37,6 @@ const LoginComponent = props => {
 
     const googleResponseSuccess = response => {
 
-        console.log('Success');
-
         // Query back-end with googleId from response to log in
 
         axios.post('https://star-trak.herokuapp.com/google-client-login', {
@@ -109,10 +107,6 @@ const LoginComponent = props => {
     // If google response was a failure, there was an error
 
     const googleResponseFailure = response => {
-
-        console.log(response);
-
-        console.log('failure');
 
         document.getElementById('login-status')
         .innerHTML = 'An unexpected error has occured';
