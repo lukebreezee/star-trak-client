@@ -232,7 +232,7 @@ const LoginComponent = props => {
                         buttonText="Continue With Google"
                         id="google-button"
                         onSuccess={res => googleResponseSuccess(res)}
-                        onFailure={() => googleResponseFailure()}
+                        onFailure={res => googleResponseFailure(res)}
                         cookiePolicy={'single_host_origin'}
 
                     />
