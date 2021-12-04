@@ -206,7 +206,13 @@ const AppComponent = props => {
 
 useEffect(() => {
 
-    getTeamInfo();
+    getTeamInfo()
+    
+    .catch(() => {
+
+      return;
+
+    });
 
 }, [location.pathname]);
 
