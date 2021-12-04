@@ -23,7 +23,8 @@ const CreateComponent = props => {
 
         }
 
-    }, [props, history]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     //Info to be sent to the database
 
