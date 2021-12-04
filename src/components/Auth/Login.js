@@ -196,6 +196,8 @@ const LoginComponent = props => {
 
                 <div className="aligned">Welcome, Please Log In</div>
 
+                <br />
+
                 <GoogleLogin 
                     
                     clientId="301612113265-5drj9s0i1l2u7tufef65d6e80a6j8pbh.apps.googleusercontent.com"
@@ -208,9 +210,7 @@ const LoginComponent = props => {
 
                 />
 
-                <div id="login-status" className="aligned alert" />
-
-                <br />
+                <div id="login-status" className="aligned alert" />\
 
                 <form className="login-fields" onSubmit={e => handleSubmit(e)} >
 
