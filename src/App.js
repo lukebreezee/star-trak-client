@@ -71,7 +71,7 @@ const AppComponent = props => {
       
       !props.userInfo.username
 
-      && /\/register|\/login|\/demo-user-select/.test(location.pathname) === false
+      && /\/register|\/login\/github|\/demo-user-select/.test(location.pathname) === false
 
     ) {
   
@@ -89,7 +89,7 @@ const AppComponent = props => {
 
         && location.pathname !== '/create-team'
 
-        && /\/register|\/login|\/demo-user-select/.test(location.pathname) === false
+        && /\/register|\/login\/github|\/login|\/demo-user-select/.test(location.pathname) === false
 
       ) {
   
