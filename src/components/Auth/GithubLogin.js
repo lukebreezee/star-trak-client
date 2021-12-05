@@ -106,7 +106,7 @@ const GithubLoginComponent = props => {
 
     // This component does not return JSX, we just need it for the URL params
 
-    return null;
+    return (<div className="aligned">Foo</div>);
 
 };
 
