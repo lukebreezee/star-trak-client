@@ -11,13 +11,13 @@ const GithubLoginComponent = props => {
 
     const { accessToken } = useParams();
 
-    console.log(accessToken);
-
     // Use history allows us to redirect the user
 
     let history = useHistory();
 
     useEffect(() => {
+
+        console.log('useEffect');
 
         //Fetches user info from back-end
 
