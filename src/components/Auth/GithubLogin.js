@@ -5,7 +5,7 @@ import { mapCredentials, mapDispatch } from '../../redux/mapToProps';
 // import axios from 'axios';
 // import { useEffect } from 'react';
 
-const GithubLoginComponent = props => {
+const GithubLogin = () => {
 
     // // Use params lets us use URL parameters
 
@@ -109,7 +109,7 @@ const GithubLoginComponent = props => {
 
 // Connect the above component to redux
 
-const GithubLogin = connect(mapCredentials, mapDispatch)(GithubLoginComponent);
+// const GithubLogin = connect(mapCredentials, mapDispatch)(GithubLoginComponent);
 
 // Parent component handles the URL params and is the one that is exported
 
