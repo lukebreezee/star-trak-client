@@ -71,7 +71,7 @@ const AppComponent = props => {
       
       !props.userInfo.username
 
-      && /\/register|\/login\/github|\/demo-user-select/.test(location.pathname) === false
+      && /\/register|\/login|\/demo-user-select/.test(location.pathname) === false
 
     ) {
   
