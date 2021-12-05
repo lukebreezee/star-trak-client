@@ -229,7 +229,7 @@ useEffect(() => {
 
               <Route path="/" component={Dashboard} exact />
 
-              <Route path="/register" component={Create} exact/>
+              <Route path="/register" component={Create} exact />
 
               <Route path="/login" component={Login} exact />
 
