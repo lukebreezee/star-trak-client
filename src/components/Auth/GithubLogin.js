@@ -1,9 +1,9 @@
-import { Route, useParams, useHistory } from 'react-router-dom';
-import { Octokit } from '@octokit/core';
+// import { Route, useParams, useHistory } from 'react-router-dom';
+// import { Octokit } from '@octokit/core';
 import { connect } from 'react-redux';
 import { mapDispatch } from '../../redux/mapToProps';
-import axios from 'axios';
-import { useEffect } from 'react';
+// import axios from 'axios';
+// import { useEffect } from 'react';
 
 const GithubLoginComponent = props => {
 
