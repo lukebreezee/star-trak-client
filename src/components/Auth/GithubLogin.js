@@ -15,6 +15,8 @@ const GithubLoginComponent = props => {
 
     let history = useHistory();
 
+    console.log(accessToken);
+
     // useEffect(() => {
 
         //Fetches user info from back-end
