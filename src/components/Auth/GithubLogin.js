@@ -110,22 +110,22 @@ const GithubLoginComponent = props => {
 
 // Connect the above component to redux
 
-const GithubLoginConnected = connect(null, mapDispatch)(GithubLoginComponent);
+const GithubLogin = connect(null, mapDispatch)(GithubLoginComponent);
 
 // Parent component handles the URL params and is the one that is exported
 
-const GithubLogin = () => {
+// const GithubLogin = () => {
 
-    return (
+//     return (
 
-        <Route path="/login/github/:accessToken">
+//         <Route path="/login/github/:accessToken">
 
-            <GithubLoginConnected />
+//             <GithubLoginConnected />
 
-        </Route>
+//         </Route>
 
-    );
+//     );
 
-};
+// };
 
 export { GithubLogin };
