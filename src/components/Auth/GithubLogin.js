@@ -7,106 +7,104 @@ import { useEffect } from 'react';
 
 const GithubLoginComponent = props => {
 
-    // Use params lets us use URL parameters
+    // // Use params lets us use URL parameters
 
-    const { accessToken } = useParams();
+    // const { accessToken } = useParams();
 
-    // Use history allows us to redirect the user
+    // // Use history allows us to redirect the user
 
-    let history = useHistory();
+    // let history = useHistory();
 
-    useEffect(() => {
+    // // useEffect(() => {
 
-        console.log('foo');
+    //     //Fetches user info from back-end
 
-    });
+    //     const fetchData = async () => {
 
-    // useEffect(() => {
+    //         console.log('foo');
 
-        //Fetches user info from back-end
+    //         let githubUsername;
 
-        const fetchData = async () => {
+    //         // Octokit makes it easier to query GitHub's API
 
-            console.log('foo');
+    //         const octokit = new Octokit({ auth: accessToken });
 
-            let githubUsername;
-
-            // Octokit makes it easier to query GitHub's API
-
-            const octokit = new Octokit({ auth: accessToken });
-
-            // Query GitHub for user login
+    //         // Query GitHub for user login
         
-            await octokit.request('GET /user')
+    //         await octokit.request('GET /user')
         
-            .then(res => {
+    //         .then(res => {
 
-                console.log(res);
+    //             console.log(res);
 
-                // If res.data.login is truthy, request was successful
+    //             // If res.data.login is truthy, request was successful
 
-                // If falsy, something went wrong, redirect to login
+    //             // If falsy, something went wrong, redirect to login
         
-                if (!res.data.login) {
+    //             if (!res.data.login) {
 
-                    console.log('No login');
+    //                 console.log('No login');
                     
-                    history.push('/login');
+    //                 history.push('/login');
         
-                    return;
+    //                 return;
                 
-                }
+    //             }
 
-                // res.data.login is their username on GitHub
+    //             // res.data.login is their username on GitHub
         
-                githubUsername = res.data.login;
+    //             githubUsername = res.data.login;
         
-            });
+    //         });
 
-            // Fetch user info now that we have the GitHub username
+    //         // Fetch user info now that we have the GitHub username
         
-            axios.post('https://star-trak.herokuapp.com/github-client-login', {
+    //         axios.post('https://star-trak.herokuapp.com/github-client-login', {
         
-                githubUsername
+    //             githubUsername
         
-            })
+    //         })
             
-            .then(res => {
+    //         .then(res => {
 
-                console.log('Got to the server response');
+    //             console.log('Got to the server response');
 
-                console.log(res);
+    //             console.log(res);
 
-                // If res.data.message is truthy, something went wrong
+    //             // If res.data.message is truthy, something went wrong
         
-                if (res.data.message) {
+    //             if (res.data.message) {
         
-                    history.push('/login');
+    //                 history.push('/login');
         
-                }
+    //             }
 
-                // Else, query was successful, so we update user info
+    //             // Else, query was successful, so we update user info
         
-                props.userLogIn(res.data);
+    //             props.userLogIn(res.data);
 
-                // Redirect to projects page
+    //             // Redirect to projects page
         
-                history.push('/projects-admin-pm');
+    //             history.push('/projects-admin-pm');
         
-            });
+    //         });
 
-        };
+    //     };
 
-        // Call the above function
+    //     // Call the above function
 
-        fetchData();
+    //     fetchData();
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, []);
+    // // eslint-disable-next-line react-hooks/exhaustive-deps
+    // // }, []);
 
-    // This component does not return JSX, we just need it for the URL params
+    // // This component does not return JSX, we just need it for the URL params
 
-    return (<div className="aligned">Foo</div>);
+    return (
+    
+        <div className="aligned">Foo</div>
+        
+    );
 
 };
 
