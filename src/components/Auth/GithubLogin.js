@@ -21,6 +21,8 @@ const GithubLoginComponent = props => {
 
         const fetchData = async () => {
 
+            console.log('foo');
+
             let githubUsername;
 
             // Octokit makes it easier to query GitHub's API
@@ -33,11 +35,15 @@ const GithubLoginComponent = props => {
         
             .then(res => {
 
+                console.log(res);
+
                 // If res.data.login is truthy, request was successful
 
                 // If falsy, something went wrong, redirect to login
         
                 if (!res.data.login) {
+
+                    console.log('No login');
                     
                     history.push('/login');
         
@@ -60,6 +66,10 @@ const GithubLoginComponent = props => {
             })
             
             .then(res => {
+
+                console.log('Got to the server response');
+
+                console.log(res);
 
                 // If res.data.message is truthy, something went wrong
         
