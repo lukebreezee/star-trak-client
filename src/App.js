@@ -263,7 +263,7 @@ useEffect(() => {
 
               <Route path="/register/github" component={GithubRegister} />
 
-              <Route path="/login/github" component={GithubLogin} />
+              <Route path="/github-login" component={GithubLogin} />
 
               <Route path="/register/google" component={GoogleRegister} />
 
