@@ -1,7 +1,7 @@
 // import { Route, useParams, useHistory } from 'react-router-dom';
 // import { Octokit } from '@octokit/core';
 import { connect } from 'react-redux';
-import { mapDispatch } from '../../redux/mapToProps';
+import { mapCredentials, mapDispatch } from '../../redux/mapToProps';
 // import axios from 'axios';
 // import { useEffect } from 'react';
 
@@ -110,7 +110,7 @@ const GithubLoginComponent = props => {
 
 // Connect the above component to redux
 
-const GithubLogin = connect(null, mapDispatch)(GithubLoginComponent);
+const GithubLogin = connect(mapCredentials, mapDispatch)(GithubLoginComponent);
 
 // Parent component handles the URL params and is the one that is exported
 
