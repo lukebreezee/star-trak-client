@@ -95,7 +95,6 @@ const GithubLoginComponent = props => {
 
     //     fetchData();
 
-    // // eslint-disable-next-line react-hooks/exhaustive-deps
     // // }, []);
 
     // // This component does not return JSX, we just need it for the URL params
