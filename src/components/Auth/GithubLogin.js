@@ -15,7 +15,11 @@ const GithubLoginComponent = props => {
 
     let history = useHistory();
 
-    console.log(accessToken);
+    useEffect(() => {
+
+        console.log('foo');
+
+    });
 
     // useEffect(() => {
 
