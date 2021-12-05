@@ -15,7 +15,7 @@ const GithubLoginComponent = props => {
 
     let history = useHistory();
 
-    useEffect(() => {
+    // useEffect(() => {
 
         //Fetches user info from back-end
 
@@ -96,7 +96,7 @@ const GithubLoginComponent = props => {
         fetchData();
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    // }, []);
 
     // This component does not return JSX, we just need it for the URL params
 
