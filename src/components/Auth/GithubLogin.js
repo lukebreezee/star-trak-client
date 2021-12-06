@@ -1,4 +1,4 @@
-import { useParams, useHistory } from 'react-router-dom';
+import { Route, useParams, useHistory } from 'react-router-dom';
 import { Octokit } from '@octokit/core';
 import { connect } from 'react-redux';
 import { mapCredentials, mapDispatch } from '../../redux/mapToProps';
@@ -108,6 +108,20 @@ const GithubLoginComponent = props => {
 
 // Connect the above component to redux
 
-const GithubLogin = connect(mapCredentials, mapDispatch)(GithubLoginComponent);
+const GithubLoginConnected = connect(mapCredentials, mapDispatch)(GithubLoginComponent);
+
+const GithubLogin = () => {
+
+    return (
+
+        <Route path="?accessToken=:accessToken">
+
+            <GithubLoginConnected />
+
+        </Route>
+
+    );
+
+};
 
 export { GithubLogin };
