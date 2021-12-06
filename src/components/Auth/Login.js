@@ -186,7 +186,7 @@ const LoginComponent = props => {
 
         <div className="main-page-parent">
 
-            <div className="auth-form">
+            <div className="auth-form" style={{maxWidth: 'fit-content'}}>
 
                 <div className="aligned">Welcome, Please Log Inn</div>
 
@@ -227,13 +227,12 @@ const LoginComponent = props => {
 
                 </div>
 
-                <form className="login-fields" style={{width: '100%'}} onSubmit={e => handleSubmit(e)} >
+                <form className="login-fields" onSubmit={e => handleSubmit(e)} >
 
                     <input 
 
                         type="text" 
                         name="username"
-                        style={{width: '100%'}}
                         onChange={e => setUsername(e.target.value)} 
                         placeholder="Email" 
                         spellCheck="false"
@@ -244,13 +243,12 @@ const LoginComponent = props => {
 
                         type="password" 
                         name="password"
-                        style={{width: '100%'}}
                         onChange={e => setPassword(e.target.value)} 
                         placeholder="Password" 
                         
                     />
 
-                    <Button variant="primary" type="submit" style={{width: '100%'}}>
+                    <Button variant="primary" type="submit">
 
                         Submit
 
