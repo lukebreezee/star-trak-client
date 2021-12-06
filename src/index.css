@@ -28,6 +28,7 @@
   flex-direction: column;
   max-width: fit-content;
   gap: 10px;
+  width: 130%;
 }
 
 nav {

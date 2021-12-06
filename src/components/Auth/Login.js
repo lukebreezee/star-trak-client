@@ -184,11 +184,11 @@ const LoginComponent = props => {
 
     return (
 
-        <div className="main-page-parent" style={{maxWidth: 'fit-content'}}>
+        <div className="main-page-parent">
 
             <div className="auth-form">
 
-                <div className="aligned">Welcome, Please Log Inn</div>
+                <div className="aligned">Welcome, Please Log In</div>
 
                 <div id="login-status" className="aligned alert" />
 
