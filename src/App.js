@@ -143,7 +143,7 @@ const AppComponent = props => {
 
         // Else, we use this formula to calculate page height
 
-        const pageHeight = ((notifCount - 5) * 12 + 100).toString();
+        const pageHeight = ((notifCount - 5) * 13 + 100).toString();
 
         // And assign the parent height to the above var in vh (viewport height)
 
