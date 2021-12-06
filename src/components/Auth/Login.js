@@ -188,7 +188,7 @@ const LoginComponent = props => {
 
             <div className="auth-form">
 
-                <div className="aligned">Welcome, Please Log In</div>
+                <div className="aligned">Welcome, Please Log Inn</div>
 
                 <div id="login-status" className="aligned alert" />
 
@@ -227,7 +227,7 @@ const LoginComponent = props => {
 
                 </div>
 
-                <form className="login-fields" onSubmit={e => handleSubmit(e)} >
+                <form className="login-fields" style={{width: '100%'}} onSubmit={e => handleSubmit(e)} >
 
                     <input 
 
