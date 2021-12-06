@@ -114,7 +114,7 @@ const GithubLogin = () => {
 
     return (
 
-        <Route path="?:accessToken">
+        <Route path=":accessToken">
 
             <GithubLoginConnected />
 
