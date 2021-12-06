@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Route, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { checkEmail } from '../../helpers';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
@@ -192,24 +192,8 @@ const GithubRegisterComponent = props => {
 
 };
 
-// Connect above component to redux
+// Connect above component to redux and export
 
 const GithubRegister = connect(null, mapDispatch)(GithubRegisterComponent);
-
-// Parent component gives access to URL params and is exported
-
-// const GithubRegister = () => {
-
-//     return (
-
-//         <Route path="/register/github/:accessToken">
-
-//             <GithubRegisterConnected />
-
-//         </Route>
-
-//     );
-
-// };
 
 export { GithubRegister };
