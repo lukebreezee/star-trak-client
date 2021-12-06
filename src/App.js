@@ -71,7 +71,7 @@ const AppComponent = props => {
       
       !props.userInfo.username
 
-      && /\/register|\/github-login|\/demo-user-select/.test(location.pathname) === false
+      && /register|\/github-login|\/demo-user-select/.test(location.pathname) === false
 
     ) {
   
@@ -89,7 +89,7 @@ const AppComponent = props => {
 
         && location.pathname !== '/create-team'
 
-        && /\/register|\/github-login|\/login|\/demo-user-select/.test(location.pathname) === false
+        && /register|\/github-login|\/login|\/demo-user-select/.test(location.pathname) === false
 
       ) {
   
@@ -261,7 +261,7 @@ useEffect(() => {
 
               <Route path="/view-ticket" component={ViewTicket} />
 
-              <Route path="/register/github" component={GithubRegister} />
+              <Route path="/github-register" component={GithubRegister} />
 
               <Route path="/github-login" component={GithubLogin} />
 
