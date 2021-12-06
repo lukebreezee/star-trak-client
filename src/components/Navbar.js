@@ -126,6 +126,16 @@ const NavbarPhoneMarkup = (
                         
                     </Dropdown.Item>
 
+                    <Dropdown.Item href="#">
+                        
+                        <Link to="/notifs" className="link-component">
+
+                            Notifications
+
+                        </Link>
+                        
+                    </Dropdown.Item>
+
                 </Dropdown.Menu>
 
             </Dropdown>
@@ -136,11 +146,7 @@ const NavbarPhoneMarkup = (
 
             </li>
 
-            <Link to="/notifs" className="link-component">
-
-                <FontAwesomeIcon icon={faBell} className="nav-icon" />
-
-            </Link>
+            <div />
 
         </ul>
 
