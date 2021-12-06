@@ -26,6 +26,8 @@ ReactDOM.render(
 
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" />
 
+    <title>Star-Trak</title>
+
     <Router>
 
       <PersistGate persistor={persistor} >
