@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Route, useParams } from 'react-router-dom';
+import { Route, useLocation } from 'react-router-dom';
 import { checkEmail } from '../../helpers';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
@@ -20,9 +20,15 @@ const GithubRegisterComponent = props => {
 
     const [username, setUsername] = useState('');
 
-    // useParams hook gives us access to URL parameters
+    // Use location lets us get the query string from the URL
 
-    const { accessToken } = useParams();
+    const { search } = useLocation();
+
+    // Get the access token from the query string
+
+    const urlParams = new URLSearchParams(search);
+
+    const accessToken = urlParams.get('accessToken');
 
     // useHistory allows us to redirect the user
 
@@ -188,22 +194,22 @@ const GithubRegisterComponent = props => {
 
 // Connect above component to redux
 
-const GithubRegisterConnected = connect(null, mapDispatch)(GithubRegisterComponent);
+const GithubRegister = connect(null, mapDispatch)(GithubRegisterComponent);
 
 // Parent component gives access to URL params and is exported
 
-const GithubRegister = () => {
+// const GithubRegister = () => {
 
-    return (
+//     return (
 
-        <Route path="/register/github/:accessToken">
+//         <Route path="/register/github/:accessToken">
 
-            <GithubRegisterConnected />
+//             <GithubRegisterConnected />
 
-        </Route>
+//         </Route>
 
-    );
+//     );
 
-};
+// };
 
 export { GithubRegister };
