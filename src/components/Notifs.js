@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import { mapCredentials, mapDispatch } from '../redux/mapToProps';
 import { useHistory } from 'react-router-dom';
-import { useEffect } from 'react';
 import axios from 'axios';
 
 const NotifsComponent = props => {
@@ -10,54 +9,51 @@ const NotifsComponent = props => {
 
     let history = useHistory();
 
+    // If no username in store, user is not logged in
+
+    if (!props.userInfo.username) {
+        
+        history.push('/login');
+
+        return null;
+    
+    }
+
+    // If no team username in store, user does not have a team
+
+    if (!props.userInfo.teamUsername) {
+        
+        history.push('/team-login');
+
+        return null;
+    
+    }
+
     // Fetch user info from server to update notif list
 
-    useEffect(() => {
+    axios.get('https://star-trak.herokuapp.com/get-user-info', {
 
-        // If no username in store, user is not logged in
+        headers: {
 
-        if (!props.userInfo.username) {
-            
-            history.push('/login');
+            username: props.userInfo.username
 
-            return null;
-        
         }
 
-        // If no team username in store, user does not have a team
+    })
+    
+    .then(res => {
 
-        if (!props.userInfo.teamUsername) {
-            
-            history.push('/team-login');
+        // Error handling
 
-            return null;
-        
-        }
+        if (res.message) return;
 
-        axios.get('https://star-trak.herokuapp.com/get-user-info', {
+        // If no error and different notif count, load user data
 
-            headers: {
+        if (res.data.notifications.length === props.userInfo.notifications.length) return;
 
-                username: props.userInfo.username
+        props.userLogIn(res.data);
 
-            }
-
-        })
-        
-        .then(res => {
-
-            // Error handling
-
-            if (res.message) return;
-
-            // If no error, load user data
-
-            props.userLogIn(res.data);
-
-        });
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    });
     
     return (
 
