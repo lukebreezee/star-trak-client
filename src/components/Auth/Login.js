@@ -188,7 +188,7 @@ const LoginComponent = props => {
 
             <div className="auth-form">
 
-                <div className="aligned">Welcome, Please Log In</div>
+                <div className="aligned">Welcome, Please Log Inn</div>
 
                 <div id="login-status" className="aligned alert" />
 
