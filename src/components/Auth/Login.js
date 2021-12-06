@@ -232,7 +232,8 @@ const LoginComponent = props => {
                     <input 
 
                         type="text" 
-                        name="username" 
+                        name="username"
+                        style={{width: '100%'}}
                         onChange={e => setUsername(e.target.value)} 
                         placeholder="Email" 
                         spellCheck="false"
@@ -242,13 +243,14 @@ const LoginComponent = props => {
                     <input 
 
                         type="password" 
-                        name="password" 
+                        name="password"
+                        style={{width: '100%'}}
                         onChange={e => setPassword(e.target.value)} 
                         placeholder="Password" 
                         
                     />
 
-                    <Button variant="primary" type="submit">
+                    <Button variant="primary" type="submit" style={{width: '100%'}}>
 
                         Submit
 
