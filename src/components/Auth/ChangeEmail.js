@@ -85,7 +85,7 @@ const ChangeEmailComponent = props => {
 
         // Query the server with new info
 
-        axios.post('https://star-trak.herokuapp.com/update-user/email/oauth', {
+        axios.post('https://star-trak.herokuapp.com/update-user/email-oauth', {
 
             username: props.userInfo.username,
             newUsername,
