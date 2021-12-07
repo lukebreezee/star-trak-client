@@ -21,7 +21,7 @@ const ChangeEmailComponent = props => {
 
     //Handles the submission of the change email form
 
-    const handleSubmit = event => {
+    const handleSubmit = () => {
 
         // Message shown to user showing status
 
@@ -75,7 +75,9 @@ const ChangeEmailComponent = props => {
 
     }
 
-    const handleSubmitOauth = event => {
+    const handleSubmitOauth = () => {
+
+        console.log('oauth');
 
         // Message shown to user
 
@@ -113,7 +115,7 @@ const ChangeEmailComponent = props => {
             alert.style.color = '#00AA00';
 
             alert.innerHTML = 'Success';
-
+            
             //After message is displayed, go back to the members page after 1/2 second
 
             setTimeout(() => {
@@ -154,11 +156,11 @@ const ChangeEmailComponent = props => {
 
         if (!props.userInfo.githubUsername && !props.userInfo.googleId) {
 
-            handleSubmit(event);
+            handleSubmit();
 
         } else {
 
-            handleSubmitOauth(event);
+            handleSubmitOauth();
 
         }
 
