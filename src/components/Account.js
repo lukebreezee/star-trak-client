@@ -251,6 +251,27 @@ const AccountComponent = props => {
 
     }
 
+    let changePasswordMarkup = null;
+
+    if (!props.userInfo.githubUsername && !props.teamInfo.googleId) {
+
+        changePasswordMarkup = (
+
+            <Button 
+                        
+                variant="dark" 
+                onClick={() => history.push('/change-password')}
+                
+            >
+
+                Change Password
+                
+            </Button>
+
+        );
+
+    }
+
     return (
 
         <div className="aligned">
@@ -314,15 +335,7 @@ const AccountComponent = props => {
                         
                     </Button>
 
-                    <Button 
-                        
-                        variant="dark" 
-                        onClick={() => history.push('/change-password')}
-                        
-                    >
-                        Change Password
-                        
-                    </Button>
+                    { changePasswordMarkup }
 
                     <Button 
                     

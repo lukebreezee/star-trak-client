@@ -23,29 +23,9 @@ const ChangeEmailComponent = props => {
 
     const handleSubmit = event => {
 
-        //Prevent the page from reloading on submit
-
-        event.preventDefault();
-
-        //Alert message for the outcome
+        // Message shown to user showing status
 
         let alert = document.getElementById('change-email-alert');
-
-        //Set the alert's color to red, show a message
-
-        alert.style.color = '#AA0000';
-
-        alert.innerHTML = 'Loading...';
-
-        //Check the format of the email, if not correct format it is invalid
-
-        if (!checkEmail(newUsername)) {
-
-            alert.innerHTML = 'Invalid Email';
-
-            return;
-
-        }
 
         //Query the database to change the email
 
@@ -95,6 +75,104 @@ const ChangeEmailComponent = props => {
 
     }
 
+    const handleSubmitOauth = event => {
+
+        // Message shown to user
+
+        let alert = document.getElementById('change-email-alert');
+
+        // Query the server with new info
+
+        axios.post('https://star-trak.herokuapp.com/update-user/email/oauth', {
+
+            username: props.userInfo.username,
+            newUsername,
+
+        })
+
+        .then(res => {
+
+            if (res.data.message) {
+
+                alert.innerHTML = res.data.message;
+
+                return;
+
+            }
+
+            //Send user info to redux store
+
+            props.userLogIn(res.data.userInfo);
+
+            //Send team info to redux store
+
+            props.teamInfoUpdate(res.data.teamInfo);
+
+            //Show the user that it was a success
+
+            alert.style.color = '#00AA00';
+
+            alert.innerHTML = 'Success';
+
+            //After message is displayed, go back to the members page after 1/2 second
+
+            setTimeout(() => {
+
+                history.push('/members-admin');
+
+            }, 500);
+
+        })
+
+    };
+
+    const submitDirect = event => {
+
+        //Prevent the page from reloading on submit
+
+        event.preventDefault();
+
+        //Alert message for the outcome
+
+        let alert = document.getElementById('change-email-alert');
+
+        //Set the alert's color to red, show a message
+
+        alert.style.color = '#AA0000';
+
+        alert.innerHTML = 'Loading...';
+
+        //Check the format of the email, if not correct format it is invalid
+
+        if (!checkEmail(newUsername)) {
+
+            alert.innerHTML = 'Invalid Email';
+
+            return;
+
+        }
+
+    };
+
+    let changeEmailPasswordInput = null;
+
+    if (!props.userInfo.githubUsername && !props.userInfo.googleId) {
+
+        changeEmailPasswordInput = (
+
+            <input 
+                            
+                type="password" 
+                placeholder="Confirm Password"
+                onChange={e => setPassword(e.target.value)}
+                required
+                
+            />
+
+        );
+
+    }
+
     return (
 
         <div className="aligned">
@@ -116,16 +194,9 @@ const ChangeEmailComponent = props => {
 
                     <MDBCardTitle>Change Email</MDBCardTitle>
 
-                    <form className="change-auth-form" onSubmit={e => handleSubmit(e)}>
+                    <form className="change-auth-form" onSubmit={e => submitDirect(e)}>
 
-                        <input 
-                            
-                            type="password" 
-                            placeholder="Confirm Password"
-                            onChange={e => setPassword(e.target.value)}
-                            required
-                            
-                        />
+                        {changeEmailPasswordInput}
 
                         <input 
                         
