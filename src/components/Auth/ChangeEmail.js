@@ -152,6 +152,16 @@ const ChangeEmailComponent = props => {
 
         }
 
+        if (!props.userInfo.githubUsername && !props.userInfo.googleId) {
+
+            handleSubmit(event);
+
+        } else {
+
+            handleSubmitOauth(event);
+
+        }
+
     };
 
     let changeEmailPasswordInput = null;
