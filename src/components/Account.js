@@ -253,7 +253,7 @@ const AccountComponent = props => {
 
     let changePasswordMarkup = null;
 
-    if (!props.userInfo.githubUsername && !props.teamInfo.googleId) {
+    if (!props.userInfo.githubUsername && !props.userInfo.googleId) {
 
         changePasswordMarkup = (
 
