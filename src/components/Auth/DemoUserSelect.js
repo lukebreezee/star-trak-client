@@ -16,6 +16,8 @@ const DemoUserSelectComponent = props => {
 
     const handleDemoLogin = e => {
 
+        document.getElementById('demo-user-select-alert').innerHTML = 'Loading...';
+
         // Fetch demo data from the server
 
         axios.get('https://star-trak.herokuapp.com/demo', {
@@ -51,6 +53,13 @@ const DemoUserSelectComponent = props => {
         <div className="spaced-form">
 
             <h3>Continue as...</h3>
+
+            <div 
+            
+                id="demo-user-select-alert" 
+                style={{color: '#FF0000', padding: ''}}
+                
+            />
 
             <Button onClick={e => handleDemoLogin(e)}>Admin</Button>
 
